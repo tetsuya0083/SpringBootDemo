@@ -1,4 +1,4 @@
-package com.estsoft.demo;
+package com.estsoft;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
