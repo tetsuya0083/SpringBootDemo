@@ -54,7 +54,7 @@ class MemberControllerTest {
 //        memberRepository.save(member);// INSERT INTO member(id, name) VALUES (1L, 'name1');
 
         // 1. when GET /members
-        ResultActions resultActions = mockMvc.perform(get("/members"));
+        ResultActions resultActions = mockMvc.perform(get("/hi"));
 
         // 3. then: /members API 호출에 대한 응답 결과가 given 전ㄹ에서 넣어준 데이터와 같다는 검증
         resultActions.andExpect(status().isOk())
