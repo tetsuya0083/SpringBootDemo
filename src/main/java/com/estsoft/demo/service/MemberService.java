@@ -27,7 +27,8 @@ public class MemberService {
     public Member getMemberById(Long id){
         Optional<Member> optMember = memberRepository.findById(id);
         //return받는 자료형(Optional)으로 바로 받는 것을 권장.
-        return optMember.orElse(new Member());
+        return optMember.orElseGet(Member::new);
+        //return optMember.orElse(new Member()); -> anti pattern
     }
 
     // member 테이블에 insert 쿼리
